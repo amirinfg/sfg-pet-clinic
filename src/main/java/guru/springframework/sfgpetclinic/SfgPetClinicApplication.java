@@ -14,8 +14,10 @@ public class SfgPetClinicApplication {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(SfgPetClinicApplication.class, args);
         MyController myController = (MyController) context.getBean("myController");
-        String ger = myController.sayHello();
-        System.out.println(ger);
+
+        System.out.println("-------primary bean");
+        System.out.println(myController.sayHello());
+
 
         System.out.println("---------- Property");
 
